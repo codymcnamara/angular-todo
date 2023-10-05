@@ -7,18 +7,10 @@
     </div>
   </div>
   <ul>
-    <app-todo *ngFor="let todo of todos" [todo]="todo"></app-todo>
-    <!-- <li >
-      <span>Walk the dogs</span>
-      <button>Delete</button>
-    </li>
-    <li>
-      <span>Water the plants</span>
-      <button>Delete</button>
-    </li>
-    <li>
-      <span>Wash the dishes</span>
-      <button>Delete</button>
-    </li> -->
+    <app-todo 
+      *ngFor="let todo of todos" 
+      [todo]="todo"
+      (delete)="handleDelete($event)"
+    ></app-todo>
   </ul>
 </div>

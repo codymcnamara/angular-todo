@@ -1,4 +1,4 @@
 <li *ngIf="todo">
     <span>{{todo.title}}</span>
-    <button>Delete</button>
+    <button (click)="delete.emit(todo)">Delete</button>
 </li>

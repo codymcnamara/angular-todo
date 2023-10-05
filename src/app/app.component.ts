@@ -13,4 +13,8 @@ export class AppComponent {
   constructor(){
     this.todos = todos;
   }
+
+  handleDelete(todo: Todo){
+    this.todos = this.todos.filter(oldTodo => oldTodo.id !== todo.id);
+  }
 }
