@@ -1,11 +1,15 @@
 <div>
   <h1>Todo List</h1>
-  <div>
-    <input type="text" placeholder="Add your task" />
+  <form [formGroup]="todoForm" (ngSubmit)="onSubmit()">
+    <input 
+      formControlName="title"
+      type="text" 
+      placeholder="Add your task" 
+    />
     <div>
-      <button>Submit</button>
+      <button type="submit">Submit</button>
     </div>
-  </div>
+  </form>
   <ul>
     <app-todo 
       *ngFor="let todo of todos" 
